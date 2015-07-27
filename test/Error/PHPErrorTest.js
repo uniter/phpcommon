@@ -18,4 +18,8 @@ describe('PHPError', function () {
 
         expect(error.message).to.equal('PHP Warning: Oh dear');
     });
+
+    it('should extend the built-in Error class', function () {
+        expect(new PHPError()).to.be.an.instanceOf(Error);
+    });
 });

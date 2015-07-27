@@ -9,11 +9,14 @@
 
 'use strict';
 
-var _ = require('lodash');
+var _ = require('lodash'),
+    util = require('util');
 
 function PHPError(level, message) {
     this.message = 'PHP ' + level + ': ' + message;
 }
+
+util.inherits(PHPError, Error);
 
 _.extend(PHPError, {
     E_ERROR: 'Error',
