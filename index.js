@@ -10,9 +10,11 @@
 'use strict';
 
 var PHPError = require('./src/Error/PHPError'),
+    PHPFatalError = require('./src/Error/PHPFatalError'),
     PHPParseError = require('./src/Error/PHPParseError');
 
 module.exports = {
     PHPError: PHPError,
+    PHPFatalError: PHPFatalError,
     PHPParseError: PHPParseError
 };

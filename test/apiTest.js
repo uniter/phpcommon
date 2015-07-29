@@ -12,11 +12,16 @@
 var expect = require('chai').expect,
     phpCommon = require('..'),
     PHPError = require('../src/Error/PHPError'),
+    PHPFatalError = require('../src/Error/PHPFatalError'),
     PHPParseError = require('../src/Error/PHPParseError');
 
 describe('Public API', function () {
     it('should export the PHPError class', function () {
         expect(phpCommon.PHPError).to.equal(PHPError);
+    });
+
+    it('should export the PHPFatalError class', function () {
+        expect(phpCommon.PHPFatalError).to.equal(PHPFatalError);
     });
 
     it('should export the PHPParseError class', function () {
