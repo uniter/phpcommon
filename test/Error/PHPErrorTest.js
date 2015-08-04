@@ -10,7 +10,8 @@
 'use strict';
 
 var expect = require('chai').expect,
-    PHPError = require('../../src/Error/PHPError');
+    PHPError = require('../../src/Error/PHPError'),
+    Exception = require('../../src/Error/Exception');
 
 describe('PHPError', function () {
     it('should set the correct message for a warning', function () {
@@ -19,7 +20,7 @@ describe('PHPError', function () {
         expect(error.message).to.equal('PHP Warning: Oh dear');
     });
 
-    it('should extend the built-in Error class', function () {
-        expect(new PHPError()).to.be.an.instanceOf(Error);
+    it('should extend the Exception class', function () {
+        expect(new PHPError()).to.be.an.instanceOf(Exception);
     });
 });

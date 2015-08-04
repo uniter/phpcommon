@@ -10,13 +10,14 @@
 'use strict';
 
 var _ = require('lodash'),
-    util = require('util');
+    util = require('util'),
+    Exception = require('./Exception');
 
 function PHPError(level, message) {
-    this.message = 'PHP ' + level + ': ' + message;
+    Exception.call(this, 'PHP ' + level + ': ' + message);
 }
 
-util.inherits(PHPError, Error);
+util.inherits(PHPError, Exception);
 
 _.extend(PHPError, {
     E_ERROR: 'Error',
