@@ -9,7 +9,7 @@
 
 'use strict';
 
-var _ = require('lodash'),
+var _ = require('microdash'),
     templateString = require('template-string'),
     util = require('util'),
     PHPError = require('./PHPError'),

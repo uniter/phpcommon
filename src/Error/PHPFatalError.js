@@ -30,7 +30,7 @@ var MESSAGE_PREFIXES = {
         18: 'Cannot use ${source} as ${alias} because the name is already in use',
         19: 'Call to a member function ${name}() on a non-object'
     },
-    _ = require('lodash'),
+    _ = require('microdash'),
     templateString = require('template-string'),
     util = require('util'),
     PHPError = require('./PHPError');

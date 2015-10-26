@@ -24,8 +24,8 @@
     "test": "npm run jshint && npm run mocha"
   },
   "dependencies": {
-    "lodash": "^3.10.0",
-    "template-string": "^1.0.0"
+    "microdash": "~1",
+    "template-string": "~1"
   },
   "devDependencies": {
     "chai": "^2.3.0",
