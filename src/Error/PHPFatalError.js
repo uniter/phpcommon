@@ -28,7 +28,8 @@ var MESSAGE_PREFIXES = {
         16: 'Interfaces may not include member variables',
         17: 'Interface function ${className}::${methodName}() cannot contain body',
         18: 'Cannot use ${source} as ${alias} because the name is already in use',
-        19: 'Call to a member function ${name}() on a non-object'
+        19: 'Call to a member function ${name}() on a non-object',
+        20: 'instanceof expects an object instance, constant given'
     },
     _ = require('microdash'),
     templateString = require('template-string'),
@@ -60,7 +61,8 @@ _.extend(PHPFatalError, {
     INTERFACE_PROPERTY_NOT_ALLOWED: 16,
     INTERFACE_METHOD_BODY_NOT_ALLOWED: 17,
     NAME_ALREADY_IN_USE: 18,
-    NON_OBJECT_METHOD_CALL: 19
+    NON_OBJECT_METHOD_CALL: 19,
+    INSTANCEOF_EXPECTS_OBJECT: 20
 });
 
 module.exports = PHPFatalError;
