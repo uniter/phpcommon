@@ -30,7 +30,8 @@ var MESSAGE_PREFIXES = {
         18: 'Cannot use ${source} as ${alias} because the name is already in use',
         19: 'Call to a member function ${name}() on a non-object',
         20: 'instanceof expects an object instance, constant given',
-        21: 'Cannot use object of type ${actual} as ${expected}'
+        21: 'Cannot use object of type ${actual} as ${expected}',
+        22: 'Using $this when not in object context'
     },
     _ = require('microdash'),
     templateString = require('template-string'),
@@ -64,7 +65,8 @@ _.extend(PHPFatalError, {
     NAME_ALREADY_IN_USE: 18,
     NON_OBJECT_METHOD_CALL: 19,
     INSTANCEOF_EXPECTS_OBJECT: 20,
-    CANNOT_USE_WRONG_TYPE_AS: 21
+    CANNOT_USE_WRONG_TYPE_AS: 21,
+    USED_THIS_OUTSIDE_OBJECT_CONTEXT: 22
 });
 
 module.exports = PHPFatalError;
