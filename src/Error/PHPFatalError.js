@@ -31,7 +31,9 @@ var MESSAGE_PREFIXES = {
         19: 'Call to a member function ${name}() on a non-object',
         20: 'instanceof expects an object instance, constant given',
         21: 'Cannot use object of type ${actual} as ${expected}',
-        22: 'Using $this when not in object context'
+        22: 'Using $this when not in object context',
+        23: '\'${operator}\' operator accepts only positive numbers',
+        24: 'Cannot break/continue ${levels} level${suffix}'
     },
     _ = require('microdash'),
     templateString = require('template-string'),
@@ -66,7 +68,9 @@ _.extend(PHPFatalError, {
     NON_OBJECT_METHOD_CALL: 19,
     INSTANCEOF_EXPECTS_OBJECT: 20,
     CANNOT_USE_WRONG_TYPE_AS: 21,
-    USED_THIS_OUTSIDE_OBJECT_CONTEXT: 22
+    USED_THIS_OUTSIDE_OBJECT_CONTEXT: 22,
+    OPERATOR_REQUIRES_POSITIVE_NUMBER: 23,
+    CANNOT_BREAK_OR_CONTINUE: 24
 });
 
 module.exports = PHPFatalError;
