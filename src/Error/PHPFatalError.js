@@ -33,7 +33,8 @@ var MESSAGE_PREFIXES = {
         21: 'Cannot use object of type ${actual} as ${expected}',
         22: 'Using $this when not in object context',
         23: '\'${operator}\' operator accepts only positive numbers',
-        24: 'Cannot break/continue ${levels} level${suffix}'
+        24: 'Cannot break/continue ${levels} level${suffix}',
+        25: 'Only variables can be passed by reference'
     },
     _ = require('microdash'),
     templateString = require('template-string'),
@@ -70,7 +71,8 @@ _.extend(PHPFatalError, {
     CANNOT_USE_WRONG_TYPE_AS: 21,
     USED_THIS_OUTSIDE_OBJECT_CONTEXT: 22,
     OPERATOR_REQUIRES_POSITIVE_NUMBER: 23,
-    CANNOT_BREAK_OR_CONTINUE: 24
+    CANNOT_BREAK_OR_CONTINUE: 24,
+    ONLY_VARIABLES_BY_REFERENCE: 25
 });
 
 module.exports = PHPFatalError;
