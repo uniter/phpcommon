@@ -35,7 +35,7 @@ var MESSAGE_PREFIXES = {
         23: '\'${operator}\' operator accepts only positive numbers',
         24: 'Cannot break/continue ${levels} level${suffix}',
         25: 'Only variables can be passed by reference',
-        26: 'Attempt to unset static property ${className}::$${propertyName} in Command line code on line 1'
+        26: 'Attempt to unset static property ${className}::$${propertyName}'
     },
     _ = require('microdash'),
     templateString = require('template-string'),
