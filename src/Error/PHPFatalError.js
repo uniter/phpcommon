@@ -34,7 +34,8 @@ var MESSAGE_PREFIXES = {
         22: 'Using $this when not in object context',
         23: '\'${operator}\' operator accepts only positive numbers',
         24: 'Cannot break/continue ${levels} level${suffix}',
-        25: 'Only variables can be passed by reference'
+        25: 'Only variables can be passed by reference',
+        26: 'Attempt to unset static property ${className}::$${propertyName} in Command line code on line 1'
     },
     _ = require('microdash'),
     templateString = require('template-string'),
@@ -72,7 +73,8 @@ _.extend(PHPFatalError, {
     USED_THIS_OUTSIDE_OBJECT_CONTEXT: 22,
     OPERATOR_REQUIRES_POSITIVE_NUMBER: 23,
     CANNOT_BREAK_OR_CONTINUE: 24,
-    ONLY_VARIABLES_BY_REFERENCE: 25
+    ONLY_VARIABLES_BY_REFERENCE: 25,
+    CANNOT_UNSET_STATIC_PROPERTY: 26
 });
 
 module.exports = PHPFatalError;
