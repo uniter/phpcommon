@@ -19,7 +19,7 @@ var MESSAGE_PREFIXES = {
         7: 'Class name must be a valid object or a string',
         8: 'Access to undeclared static property: ${className}::$${propertyName}',
         9: 'Call to undefined method ${className}::${methodName}()',
-        10: 'Cannot access self:: when no class scope is active',
+        10: 'Cannot access ${className}:: when no class scope is active',
         11: 'Undefined constant \'${name}\'',
         12: 'Uncaught exception \'${name}\'',
         13: 'Cannot access ${visibility} property ${className}::$${propertyName}',
@@ -35,7 +35,8 @@ var MESSAGE_PREFIXES = {
         23: '\'${operator}\' operator accepts only positive numbers',
         24: 'Cannot break/continue ${levels} level${suffix}',
         25: 'Only variables can be passed by reference',
-        26: 'Attempt to unset static property ${className}::$${propertyName}'
+        26: 'Attempt to unset static property ${className}::$${propertyName}',
+        27: 'Cannot access parent:: when current class scope has no parent'
     },
     _ = require('microdash'),
     templateString = require('template-string'),
@@ -58,7 +59,7 @@ _.extend(PHPFatalError, {
     CLASS_NAME_NOT_VALID: 7,
     UNDECLARED_STATIC_PROPERTY: 8,
     CALL_TO_UNDEFINED_METHOD: 9,
-    SELF_WHEN_NO_ACTIVE_CLASS: 10,
+    CANNOT_ACCESS_WHEN_NO_ACTIVE_CLASS: 10,
     UNDEFINED_CONSTANT: 11,
     UNCAUGHT_EXCEPTION: 12,
     CANNOT_ACCESS_PROPERTY: 13,
@@ -74,7 +75,8 @@ _.extend(PHPFatalError, {
     OPERATOR_REQUIRES_POSITIVE_NUMBER: 23,
     CANNOT_BREAK_OR_CONTINUE: 24,
     ONLY_VARIABLES_BY_REFERENCE: 25,
-    CANNOT_UNSET_STATIC_PROPERTY: 26
+    CANNOT_UNSET_STATIC_PROPERTY: 26,
+    NO_PARENT_CLASS: 27
 });
 
 module.exports = PHPFatalError;
