@@ -20,6 +20,7 @@ function PHPError(level, message) {
 util.inherits(PHPError, Exception);
 
 _.extend(PHPError, {
+    E_DEPRECATED: 'Deprecated',
     E_ERROR: 'Error',
     E_FATAL: 'Fatal error',
     E_NOTICE: 'Notice',
