@@ -10,6 +10,7 @@
 'use strict';
 
 var MESSAGE_PREFIXES = {
+        0: '${message}',
         1: 'Unsupported operand types',
         2: 'Call to undefined function ${name}()',
         3: 'Class \'${name}\' not found',
@@ -50,6 +51,7 @@ function PHPFatalError(code, variables) {
 util.inherits(PHPFatalError, PHPError);
 
 _.extend(PHPFatalError, {
+    GENERIC: 0,
     UNSUPPORTED_OPERAND_TYPES: 1,
     CALL_TO_UNDEFINED_FUNCTION: 2,
     CLASS_NOT_FOUND: 3,

@@ -13,6 +13,14 @@ var expect = require('chai').expect,
     PHPFatalError = require('../../src/Error/PHPFatalError');
 
 describe('PHPFatalError', function () {
+    it('should set the correct message for a generic error', function () {
+        var error = new PHPFatalError(PHPFatalError.GENERIC, {
+            message: 'My generic message here'
+        });
+
+        expect(error.message).to.equal('PHP Fatal error: My generic message here');
+    });
+
     it('should set the correct message for a call to undefined function error', function () {
         var error = new PHPFatalError(PHPFatalError.CALL_TO_UNDEFINED_FUNCTION, {
             name: 'aMissingFunction'
