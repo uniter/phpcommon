@@ -33,7 +33,7 @@
     "mocha": "^6.2.0",
     "nowdoc": "^1.0.0",
     "sinon": "~1.15",
-    "sinon-chai": "^2.7.0"
+    "sinon-chai": "^2.14.0"
   },
   "engines": {
     "node": ">=0.6"
