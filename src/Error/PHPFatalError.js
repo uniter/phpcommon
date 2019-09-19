@@ -37,7 +37,9 @@ var MESSAGE_PREFIXES = {
         24: 'Cannot break/continue ${levels} level${suffix}',
         25: 'Only variables can be passed by reference',
         26: 'Attempt to unset static property ${className}::$${propertyName}',
-        27: 'Cannot access parent:: when current class scope has no parent'
+        27: 'Cannot access parent:: when current class scope has no parent',
+        28: '\'goto\' to undefined label \'${label}\'',
+        29: 'Label \'${label}\' already defined'
     },
     _ = require('microdash'),
     templateString = require('template-string'),
@@ -78,7 +80,9 @@ _.extend(PHPFatalError, {
     CANNOT_BREAK_OR_CONTINUE: 24,
     ONLY_VARIABLES_BY_REFERENCE: 25,
     CANNOT_UNSET_STATIC_PROPERTY: 26,
-    NO_PARENT_CLASS: 27
+    NO_PARENT_CLASS: 27,
+    GOTO_TO_UNDEFINED_LABEL: 28,
+    LABEL_ALREADY_DEFINED: 29
 });
 
 module.exports = PHPFatalError;
