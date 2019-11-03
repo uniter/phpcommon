@@ -13,7 +13,8 @@ var expect = require('chai').expect,
     phpCommon = require('..'),
     PHPError = require('../src/Error/PHPError'),
     PHPFatalError = require('../src/Error/PHPFatalError'),
-    PHPParseError = require('../src/Error/PHPParseError');
+    PHPParseError = require('../src/Error/PHPParseError'),
+    Translator = require('../src/Translator');
 
 describe('Public API', function () {
     it('should export the PHPError class', function () {
@@ -26,5 +27,9 @@ describe('Public API', function () {
 
     it('should export the PHPParseError class', function () {
         expect(phpCommon.PHPParseError).to.equal(PHPParseError);
+    });
+
+    it('should export the Translator class', function () {
+        expect(phpCommon.Translator).to.equal(Translator);
     });
 });

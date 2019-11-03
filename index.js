@@ -12,11 +12,13 @@
 var Exception = require('./src/Error/Exception'),
     PHPError = require('./src/Error/PHPError'),
     PHPFatalError = require('./src/Error/PHPFatalError'),
-    PHPParseError = require('./src/Error/PHPParseError');
+    PHPParseError = require('./src/Error/PHPParseError'),
+    Translator = require('./src/Translator');
 
 module.exports = {
     Exception: Exception,
     PHPError: PHPError,
     PHPFatalError: PHPFatalError,
-    PHPParseError: PHPParseError
+    PHPParseError: PHPParseError,
+    Translator: Translator
 };
