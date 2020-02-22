@@ -9,22 +9,21 @@
 
 'use strict';
 
-var _ = require('microdash'),
-    templateString = require('template-string'),
-    util = require('util'),
-    PHPError = require('./PHPError'),
-    MESSAGE_PREFIXES = {
-        1: 'syntax error, unexpected ${what} in ${file} on line ${line}'
-    };
+var util = require('util'),
+    PHPError = require('./PHPError');
 
-function PHPParseError(code, variables) {
-    PHPError.call(this, PHPError.E_PARSE, templateString(MESSAGE_PREFIXES[code], variables));
+/**
+ * Represents a PHP parse error
+ *
+ * @param {string} message
+ * @param {string|null} filePath
+ * @param {number|null} lineNumber
+ * @constructor
+ */
+function PHPParseError(message, filePath, lineNumber) {
+    PHPError.call(this, PHPError.E_PARSE, message, filePath, lineNumber);
 }
 
 util.inherits(PHPParseError, PHPError);
-
-_.extend(PHPParseError, {
-    SYNTAX_UNEXPECTED: 1
-});
 
 module.exports = PHPParseError;

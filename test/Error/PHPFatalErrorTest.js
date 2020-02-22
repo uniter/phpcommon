@@ -10,22 +10,39 @@
 'use strict';
 
 var expect = require('chai').expect,
+    PHPError = require('../../src/Error/PHPError'),
     PHPFatalError = require('../../src/Error/PHPFatalError');
 
 describe('PHPFatalError', function () {
-    it('should set the correct message for a generic error', function () {
-        var error = new PHPFatalError(PHPFatalError.GENERIC, {
-            message: 'My generic message here'
-        });
+    var error;
 
-        expect(error.message).to.equal('PHP Fatal error: My generic message here');
+    beforeEach(function () {
+        error = new PHPFatalError('Oh dear!', '/path/to/my/module.php', 432);
     });
 
-    it('should set the correct message for a call to undefined function error', function () {
-        var error = new PHPFatalError(PHPFatalError.CALL_TO_UNDEFINED_FUNCTION, {
-            name: 'aMissingFunction'
-        });
+    it('should set the correct level', function () {
+        expect(error.getLevel()).to.equal(PHPError.E_ERROR);
+    });
 
-        expect(error.message).to.equal('PHP Fatal error: Call to undefined function aMissingFunction()');
+    it('should set the correct message', function () {
+        expect(error.message).to.equal('PHP Fatal error: Oh dear! in /path/to/my/module.php on line 432');
+    });
+
+    it('should set the correct original message', function () {
+        // Note that file and line information should not be included,
+        // as it will be fetched separately via the .getFilePath() and .getLineNumber() methods
+        expect(error.getMessage()).to.equal('Oh dear!');
+    });
+
+    it('should set the correct file path', function () {
+        expect(error.getFilePath()).to.equal('/path/to/my/module.php');
+    });
+
+    it('should set the correct line number', function () {
+        expect(error.getLineNumber()).to.equal(432);
+    });
+
+    it('should extend the PHPError class', function () {
+        expect(error).to.be.an.instanceOf(PHPError);
     });
 });
