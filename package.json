@@ -24,13 +24,13 @@
     "test": "npm run jshint && npm run mocha"
   },
   "dependencies": {
-    "microdash": "~1",
+    "microdash": "^1.4.1",
     "template-string": "~1"
   },
   "devDependencies": {
     "chai": "^2.3.0",
-    "jshint": "^2.10.2",
-    "mocha": "^7.1.1",
+    "jshint": "^2.11.1",
+    "mocha": "^7.2.0",
     "nowdoc": "^1.0.0",
     "sinon": "~1.15",
     "sinon-chai": "^2.14.0"
