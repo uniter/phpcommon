@@ -1,7 +1,7 @@
 PHPCommon
 =========
 
-[![Build Status](https://secure.travis-ci.org/uniter/phpcommon.png?branch=master)](http://travis-ci.org/uniter/phpcommon)
+[![Build Status](https://github.com/uniter/phpcommon/workflows/CI/badge.svg)](https://github.com/uniter/phpcommon/actions?query=workflow%3ACI)
 
 Common tools for PHP environments.
 
