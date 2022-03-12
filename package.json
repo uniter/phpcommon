@@ -7,15 +7,15 @@
     "common",
     "environment"
   ],
-  "homepage": "http://uniter.github.com/phpcommon/",
-  "author": "Dan Phillimore <dan@ovms.co> (http://ovms.co)",
+  "homepage": "https://github.com/uniter/phpcommon/",
+  "author": "Dan Phillimore <dan@ovms.co>",
   "repository": {
     "type": "git",
     "url": "https://github.com/uniter/phpcommon"
   },
   "bugs": {
     "email": "dan@ovms.co",
-    "url": "http://github.com/uniter/phpcommon/issues"
+    "url": "https://github.com/uniter/phpcommon/issues"
   },
   "main": "index",
   "scripts": {
