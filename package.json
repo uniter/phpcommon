@@ -11,7 +11,7 @@
   "author": "Dan Phillimore <dan@ovms.co>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/uniter/phpcommon"
+    "url": "git+https://github.com/uniter/phpcommon.git"
   },
   "bugs": {
     "email": "dan@ovms.co",
